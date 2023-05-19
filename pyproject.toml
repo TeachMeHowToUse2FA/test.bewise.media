@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "mp3-media-demo"
+version = "0.1.0"
+description = "WAV to MP3 service"
+authors = ["Konstantin Nikitanov <knikitanov@me.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = "^0.22.0"
+pydantic = {extras = ["dotenv"], version = "^1.10.7"}
+databases = {extras = ["asyncpg"], version = "^0.7.0"}
+psycopg2-binary = "^2.9.6"
+alembic = "^1.11.0"
+python-multipart = "^0.0.6"
+pydub = "^0.25.1"
+aiofiles = "^23.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
